@@ -28,7 +28,6 @@ if __name__ == '__main__':
     parser.add_option("-d", "--debug",
                       action="store_true", dest="debug",
                       help=optparse.SUPPRESS_HELP)
-
     options, _ = parser.parse_args()
 
     application.run(

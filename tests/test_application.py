@@ -1,5 +1,9 @@
 import json
 import pytest
+import sys
+
+sys.path.append('../')
+
 from helloworld.application import application
 
 @pytest.fixture
