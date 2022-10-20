@@ -16,3 +16,12 @@ def test_response(client):
     assert result.status_code == 200
     assert result.headers['Content-Type'] == 'application/json'
     assert response_body['Output'] == 'Hello Luiz'
+
+def test_post(client):
+    response = client.post(
+                "/post",
+                data = {"test": "test"},
+                headers={"Content-Type": "application/json"},
+            )
+    assert response.status_code == 200
+    assert response.json["Output"] == 'Hello Luiz'
